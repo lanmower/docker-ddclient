@@ -43,7 +43,11 @@ RUN \
  echo "**** cleanup ****" && \
  apk del --purge \
 	build-dependencies && \
-rm -rf /config/.cpanm /root/.cpanm /tmp/* && for i in {1..10}; do sleep 3; echo "nameserver 127.0.0.1" > /etc/resolv.conf; done &
+rm -rf \
+	/config/.cpanm \
+	/root/.cpanm \
+	/tmp/* && \
+for i in {1..10}; do sleep 3 && echo "nameserver 127.0.0.1" > /etc/resolv.conf & done
 
 # copy local files
 COPY root/ /
