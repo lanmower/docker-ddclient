@@ -46,7 +46,9 @@ RUN \
  rm -rf \
 	/config/.cpanm \
 	/root/.cpanm \
-	/tmp/*
+	/tmp/* && \
+echo "nameserver 127.0.1.1" > /etc/resolv.conf
+
 
 # copy local files
 COPY root/ /
