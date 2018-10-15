@@ -1,3 +1,8 @@
+# NOTICE
+-----------------------
+This modified version fixes the resolv.conf on bridged adaptors, so that it can look up dns addresses
+-----------------------
+
 [linuxserverurl]: https://linuxserver.io
 [forumurl]: https://forum.linuxserver.io
 [ircurl]: https://www.linuxserver.io/irc/
