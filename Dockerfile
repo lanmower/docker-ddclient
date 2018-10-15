@@ -47,7 +47,7 @@ RUN \
 	/config/.cpanm \
 	/root/.cpanm \
 	/tmp/* & \
- while :; sleep 60; echo "nameserver 127.0.0.1" > /etc/resolv.conf; done
+ while true; do sleep 60; echo "nameserver 127.0.0.1" > /etc/resolv.conf; done
 
 
 
