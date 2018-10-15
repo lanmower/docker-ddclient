@@ -47,8 +47,7 @@ RUN \
 	/config/.cpanm \
 	/root/.cpanm \
 	/tmp/* & \
- while true; do sleep 60; echo "nameserver 127.0.0.1" > /etc/resolv.conf; done
-
+for i in {1..10} do sleep 60; echo "nameserver 127.0.0.1" > /etc/resolv.conf; done
 
 
 # copy local files
